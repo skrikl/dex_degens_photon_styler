@@ -9,11 +9,17 @@
         "48": "icons/icon48.png",
         "128": "icons/icon128.png"
     },
+    "action": {
+    "default_popup": "popup/popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
     "content_scripts": [
       {
         "matches": ["*://photon-sol.tinyastro.io/*/discover*"],
         "js": ["content.js"]
       }
     ],
-    "permissions": []
+    "permissions": ["storage"]
   }
